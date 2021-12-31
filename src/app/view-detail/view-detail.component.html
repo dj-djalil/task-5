@@ -1,0 +1,32 @@
+
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Email</th>
+        <th scope="col">Company</th>
+        <th scope="col">Date of joining</th>
+        <th scope="col">Job Description</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th *ngIf="details">1</th>
+        <td *ngIf="details">{{details.firstName}}</td>
+        <td *ngIf="details">{{details.lastName}}</td>
+        <td *ngIf="details">{{details.email}}</td>
+        <td *ngIf="details">{{details.companyName}}</td>
+        <td *ngIf="details">{{details.joiningDate | date : 'fullDate' }}</td>
+        <td *ngIf="details">{{details.roleDescription | maxLength : 5}}</td>
+
+      </tr>
+
+
+    </tbody>
+  </table>
+</div>
